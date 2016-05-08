@@ -1,0 +1,33 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: What's the title of this blog ?
+email: ewjoachim@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  For what it's worth, its title is auto-refering.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://joachim.jablon.fr" # the base hostname & protocol for your site
+twitter_username: ewjoachim
+github_username:  ewjoachim
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+
+highlighter: pygments
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Joachim Jablon"
+      layout: "post"

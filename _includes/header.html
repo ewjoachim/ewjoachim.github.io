@@ -1,0 +1,33 @@
+
+<div class="wrapper">
+  <center> <a href="/index.html"><div class="site-title">   {{site.title}} </div></a></center>
+</div>
+<div class="wrapper site-description">
+<center>  {{site.description}} </center>
+</div>
+<div class="wrapper">
+  <div class="trigger site-navigation">
+    <a class="page-link" href="/index.html">HOME</a><span class="exclamationMark">/</span>
+
+    {% assign topBarLinks =  %}
+
+    {% for element in site.pages %}
+      {% if element.title %}
+
+        <a class="page-link" href="{{element.url | prepend: site.baseurl }}">{{element.title}}</a><span class="exclamationMark">/</span>
+      {% endif %}
+    {% endfor %}
+
+    {% for element in site.data.topLinks %}
+
+      <a class="page-link" href="{{element.url | prepend: site.baseurl }}">{{element.title}}</a>
+
+      {% unless forloop.last %}
+        <span class="exclamationMark">/</span>
+      {% endunless %}
+    {% endfor %}
+
+
+
+  </div>
+</div>
