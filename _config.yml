@@ -16,7 +16,6 @@ twitter_username: ewjoachim
 github_username:  ewjoachim
 
 # Build settings
-markdown: redcarpet
 
 highlighter: pygments
 
