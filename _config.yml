@@ -16,10 +16,7 @@ twitter_username: ewjoachim
 github_username:  ewjoachim
 
 # Build settings
-markdown: kramdown
-
-kramdown:
-  input: GFM
+markdown: redcarpet
 
 highlighter: pygments
 
