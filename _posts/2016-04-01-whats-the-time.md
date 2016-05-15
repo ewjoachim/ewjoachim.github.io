@@ -1,5 +1,6 @@
 ---
 title: "What's the time?"
+icon: clock-o
 ---
 
 I gave a talk about DST, Time Zones, and other attrocities, and how they interract with Python.
