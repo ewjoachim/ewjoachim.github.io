@@ -378,10 +378,14 @@ pre {
   text-transform: capitalize;
   font-weight: 500;
   margin-top: 1em;
-  max-width: 500px;
+  max-width: 560px;
   &,
   &:visited {
     color: $grey-color-dark;
+  }
+  .fa-stack {
+    font-size: 80%;
+    margin: 0;
   }
 }
 .site-description {
