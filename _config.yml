@@ -17,6 +17,8 @@ github_username:  ewjoachim
 
 # Build settings
 
+exclude: ['*.ipynb']
+
 highlighter: rouge
 
 defaults:
