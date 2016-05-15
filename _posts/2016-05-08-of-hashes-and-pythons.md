@@ -1,5 +1,3 @@
-# Of Hashes and Pythons
-
 I posted the following code on a [tweet](https://twitter.com/Ewjoachim/status/728610568886718466) today
 and subsequently had a very interesting talk answering [questions](https://twitter.com/codingrixx/status/728616489318789120) about this, which I'll sumarize here. There might also be new material, too.
 
