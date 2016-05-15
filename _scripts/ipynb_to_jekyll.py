@@ -14,16 +14,6 @@ import os
 import re
 import sys
 import io
-from datetime import datetime
-
-from slugify import slugify
-
-
-def compute_file_name(title):
-    return "{:%Y-%m-%d}-{}.md".format(
-        datetime.now(),
-        slugify(title),
-    )
 
 
 def main():
@@ -39,13 +29,9 @@ def main():
 
     out_filename = os.path.join(
         dirname,
-        compute_file_name(title)
+        "{}.md".format(title)
     )
-    out_content = (
-        """---"""
-        """title: {title}"""
-        """---"""
-    ).format(title=title.replace('"', '\\"'))
+    out_content = ""
     mem_file = io.StringIO()
     write = functools.partial(print, file=mem_file)
 
@@ -76,9 +62,12 @@ def main():
                         write("{% capture content %}{% highlight python %}")
                         write(''.join(output['data']["text/plain"]))
                         write("{% endhighlight %}{% endcapture %}")
-                        write("{{% include notebook-cell.html execution_count={} content=content type='output' %}}".format(
-                            cell['execution_count'],
-                        ))
+                        write(
+                            "{{% include notebook-cell.html execution_count={} "
+                            "content=content type='output' %}}".format(
+                                cell['execution_count'],
+                            )
+                        )
                     else:
                         write("<pre>")
                         if output['output_type'] == 'stream':
