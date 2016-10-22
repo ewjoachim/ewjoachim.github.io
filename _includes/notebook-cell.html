@@ -1,10 +1,5 @@
-<div class="cell">
+<div class="cell {{ include.type }}-cell">
 	<div class="prompt {{ include.type }}-prompt">
-	{% if include.type == "input" %}
-		In:
-	{% else %}
-		Out:
-	{% endif %}
 	{{include.execution_count}}</div>
 	{{ include.content }}
 </div>
