@@ -213,7 +213,7 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
+    font-size: 14px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     // background-color: #eef;
@@ -679,7 +679,7 @@ pre {
 .il                { color: #ae81ff }               /* Literal.Number.Integer.Long */
 
 .prompt {
-    min-width: 10ex;
+    min-width: 14ex;
     padding: 0.4em;
     margin: 0px;
     font-family: monospace;
@@ -692,6 +692,7 @@ pre {
     -ms-user-select: none;
     user-select: none;
     cursor: default;
+    font-size: 90%;
 
     &.input-prompt {
       color: #303F9F;
@@ -699,6 +700,14 @@ pre {
   }
 
     &.output-prompt {
+      color: #D84315;
+  }
+
+    &.print-prompt {
+      color: #43D815;
+  }
+
+    &.exception-prompt {
       color: #D84315;
   }
 }
@@ -717,4 +726,9 @@ div.cell {
     display: flex;
     flex-direction: row;
     align-items: stretch;
+
+    >figure.highlight {
+      width: 100%;
+    }
+
 }
