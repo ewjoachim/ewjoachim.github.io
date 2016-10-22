@@ -48,35 +48,47 @@ def main():
                 write(''.join(cell['source']))
                 write("{% endhighlight %}{% endcapture %}")
 
-                write("{{% include notebook-cell.html execution_count={} content=content type='input' %}}".format(
-                    cell['execution_count'],
+                write("{{% include notebook-cell.html execution_count='{}' content=content type='input' %}}".format(
+                    "In: [{}]".format(cell['execution_count'] or " "),
                 ))
 
-                unknown_types = {o['output_type'] for o in cell['outputs']} - {'stream', 'execute_result'}
+                unknown_types = {o['output_type'] for o in cell['outputs']} - {'stream', 'execute_result', 'error'}
                 if unknown_types:
                     raise ValueError("Unknown types : {}".format(", ".join(unknown_types)))
 
                 for output in cell['outputs']:
 
-                    if output['output_type'] == 'execute_result':
-                        write("{% capture content %}{% highlight python %}")
-                        write(''.join(output['data']["text/plain"]))
-                        write("{% endhighlight %}{% endcapture %}")
-                        write(
-                            "{{% include notebook-cell.html execution_count={} "
-                            "content=content type='output' %}}".format(
-                                cell['execution_count'],
-                            )
-                        )
-                    else:
-                        write("<pre>")
-                        if output['output_type'] == 'stream':
-                            write(''.join(output['text']).strip(" \n"))
+                    output_type_css = {
+                        'execute_result': 'output',
+                        'stream': 'print',
+                        'error': 'exception',
+                    }
+                    header = ""
 
-                        elif output['output_type'] == 'pyerr':
-                            write('\n'.join(strip_colors(o)
-                                            for o in output['traceback']).strip(" \n"))
-                        write("</pre>")
+                    if output['output_type'] == 'execute_result':
+                        content = ''.join(output['data']["text/plain"])
+                        header = "Out: [{}]".format(cell['execution_count'])
+                    else:
+                        if output['output_type'] == 'stream':
+                            content = ''.join(output['text']).strip(" \n")
+
+                        elif output['output_type'] == 'error':
+                            content = '\n'.join(
+                                strip_colors(o)
+                                for o in output['traceback']
+                            ).strip(" \n")
+
+                    write("{% capture content %}{% highlight pytb %}")
+                    write(content)
+                    write("{% endhighlight %}{% endcapture %}")
+
+                    write(
+                        "{{% include notebook-cell.html execution_count='{}' "
+                        "content=content type='{}' %}}".format(
+                            header,
+                            output_type_css[output['output_type']]
+                        )
+                    )
         except:
             print(cell, type(cell))
             raise
