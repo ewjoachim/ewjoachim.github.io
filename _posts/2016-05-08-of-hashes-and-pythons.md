@@ -11,32 +11,34 @@ class A(object):
     def __hash__(self):
         return id(self)
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=1 content=content type='input' %}
+{% include notebook-cell.html execution_count='In: [1]' content=content type='input' %}
 
 {% capture content %}{% highlight python %}
 class B(object):
     def __hash__(self):
         return 1
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=2 content=content type='input' %}
+{% include notebook-cell.html execution_count='In: [2]' content=content type='input' %}
 
 {% capture content %}{% highlight python %}
 %%timeit
 {A() for a in range(10000)}
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=3 content=content type='input' %}
-<pre>
+{% include notebook-cell.html execution_count='In: [3]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 100 loops, best of 3: 4.63 ms per loop
-</pre>
+{% endhighlight %}{% endcapture %}
+{% include notebook-cell.html execution_count='' content=content type='print' %}
 
 {% capture content %}{% highlight python %}
 %%timeit
 {B() for a in range(10000)}
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=4 content=content type='input' %}
-<pre>
+{% include notebook-cell.html execution_count='In: [4]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 1 loop, best of 3: 1.42 s per loop
-</pre>
+{% endhighlight %}{% endcapture %}
+{% include notebook-cell.html execution_count='' content=content type='print' %}
 
 ## So what's happening here ?
 
@@ -94,60 +96,64 @@ class Verbose(object):
         """
         return self.name
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=5 content=content type='input' %}
+{% include notebook-cell.html execution_count='In: [5]' content=content type='input' %}
 
 Play time !
 
 {% capture content %}{% highlight python %}
 Verbose("a") == Verbose("b")
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=6 content=content type='input' %}
-<pre>
+{% include notebook-cell.html execution_count='In: [6]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 Is a equal to b ? False.
-</pre>
-{% capture content %}{% highlight python %}
+{% endhighlight %}{% endcapture %}
+{% include notebook-cell.html execution_count='' content=content type='print' %}
+{% capture content %}{% highlight pytb %}
 False
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=6 content=content type='output' %}
+{% include notebook-cell.html execution_count='Out: [6]' content=content type='output' %}
 
 {% capture content %}{% highlight python %}
 {Verbose("a")}
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=7 content=content type='input' %}
-<pre>
+{% include notebook-cell.html execution_count='In: [7]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 Asking the hash for a which is -1212919011480583274.
-</pre>
-{% capture content %}{% highlight python %}
+{% endhighlight %}{% endcapture %}
+{% include notebook-cell.html execution_count='' content=content type='print' %}
+{% capture content %}{% highlight pytb %}
 {a}
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=7 content=content type='output' %}
+{% include notebook-cell.html execution_count='Out: [7]' content=content type='output' %}
 
 {% capture content %}{% highlight python %}
 {Verbose("a"), Verbose("b")}
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=8 content=content type='input' %}
-<pre>
+{% include notebook-cell.html execution_count='In: [8]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 Asking the hash for b which is 5265123888727380584.
 Asking the hash for a which is -1212919011480583274.
-</pre>
-{% capture content %}{% highlight python %}
+{% endhighlight %}{% endcapture %}
+{% include notebook-cell.html execution_count='' content=content type='print' %}
+{% capture content %}{% highlight pytb %}
 {b, a}
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=8 content=content type='output' %}
+{% include notebook-cell.html execution_count='Out: [8]' content=content type='output' %}
 
 {% capture content %}{% highlight python %}
 {Verbose("a"), Verbose("a")}
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=9 content=content type='input' %}
-<pre>
+{% include notebook-cell.html execution_count='In: [9]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 Asking the hash for a which is -1212919011480583274.
 Asking the hash for a which is -1212919011480583274.
 Is a equal to a ? True.
-</pre>
-{% capture content %}{% highlight python %}
+{% endhighlight %}{% endcapture %}
+{% include notebook-cell.html execution_count='' content=content type='print' %}
+{% capture content %}{% highlight pytb %}
 {a}
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=9 content=content type='output' %}
+{% include notebook-cell.html execution_count='Out: [9]' content=content type='output' %}
 
 When I put an object in a set, these things happen :
 
@@ -164,13 +170,16 @@ class Verbose2(Verbose):
     def __hash__(self):
         return 1
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=10 content=content type='input' %}
+{% include notebook-cell.html execution_count='In: [10]' content=content type='input' %}
 
 {% capture content %}{% highlight python %}
-{Verbose2("a"), Verbose2("b"), Verbose2("c"), Verbose2("d"), Verbose2("e"), Verbose2("f")}
+{
+    Verbose2("a"), Verbose2("b"), Verbose2("c"),
+    Verbose2("d"), Verbose2("e"), Verbose2("f")
+}
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=11 content=content type='input' %}
-<pre>
+{% include notebook-cell.html execution_count='In: [11]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 Is f equal to e ? False.
 Is f equal to d ? False.
 Is e equal to d ? False.
@@ -186,18 +195,19 @@ Is e equal to a ? False.
 Is d equal to a ? False.
 Is c equal to a ? False.
 Is b equal to a ? False.
-</pre>
-{% capture content %}{% highlight python %}
+{% endhighlight %}{% endcapture %}
+{% include notebook-cell.html execution_count='' content=content type='print' %}
+{% capture content %}{% highlight pytb %}
 {f, a, c, b, e, d}
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=11 content=content type='output' %}
+{% include notebook-cell.html execution_count='Out: [11]' content=content type='output' %}
 
 Thats 15 comparisons for 6 objects. Each object gets compared to all the others. The number of comparison is `6 * 5 / 2`
 
 {% capture content %}{% highlight python %}
 n = 6
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=12 content=content type='input' %}
+{% include notebook-cell.html execution_count='In: [12]' content=content type='input' %}
 
 {% capture content %}{% highlight python %}
 def number_of_comparisons(n):
@@ -205,22 +215,22 @@ def number_of_comparisons(n):
 
 number_of_comparisons(6)
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=13 content=content type='input' %}
-{% capture content %}{% highlight python %}
+{% include notebook-cell.html execution_count='In: [13]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 15
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=13 content=content type='output' %}
+{% include notebook-cell.html execution_count='Out: [13]' content=content type='output' %}
 
 So this is what is happening for our initial bad example : there are 10 000 objects that all get compared to each other.
 
 {% capture content %}{% highlight python %}
 number_of_comparisons(10000)
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=14 content=content type='input' %}
-{% capture content %}{% highlight python %}
+{% include notebook-cell.html execution_count='In: [14]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 49995000
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=14 content=content type='output' %}
+{% include notebook-cell.html execution_count='Out: [14]' content=content type='output' %}
 
 That's ~50 millions.
 
@@ -230,7 +240,7 @@ That's ~50 millions.
 
 And yes, if a hash could be anything, that would be true. Fortunately, we know something about hashes : they're integers. A comparison between any objects can give 2 results : equal or not equal. A comparison between integers can give 3 results : less, equal, greater.
 
-What happens behind the scene may depend on the python implemention. Better than telling you things that Python does that we cannot **test** here, let's give an example of what à Python implementation **might** do.
+What happens behind the scene may depend on the python implemention. Better than telling you things that Python does that we cannot **test** here, let's give an example of what a Python implementation **might** do.
 
 Python could place all our values in a [Binary Tree](https://en.wikipedia.org/wiki/Binary_tree) (`btree`). A binary tree is a way to organize sortable elements that look a lot like the game where you have to guess someone's number when they only tell you plus or minus. This allows for very efficient fetching of your data (`log2(n)`)
 
@@ -238,7 +248,7 @@ Python could place all our values in a [Binary Tree](https://en.wikipedia.org/wi
 
 Now we know why the `A` class is fast and the `B` class is so very very slow.
 
-Thank you very much. The show's finished. What you want more ? Ok, let's get you more !
+Thank you very much. The show's finished. What ? You want more ? Ok, let's get you more !
 
 ## What happens when the hash is not really reliable ?
 
@@ -248,19 +258,26 @@ class C(object):
     def __hash__(self):
         return random.randint(0, 10)
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=15 content=content type='input' %}
+{% include notebook-cell.html execution_count='In: [15]' content=content type='input' %}
 
 {% capture content %}{% highlight python %}
 c = C()
 s = {c}
-print ("Is c in the set of s that contains only c ?", c in s)
-print ("And what if I ask you 20 times the question ?", any(c in s for i in range(20)))
+print(
+    "Is c in the set of s that contains only c ?",
+    c in s
+)
+print(
+    "And what if I ask you 20 times the question ?",
+    any(c in s for i in range(20))
+)
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=16 content=content type='input' %}
-<pre>
+{% include notebook-cell.html execution_count='In: [16]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 Is c in the set of s that contains only c ? False
 And what if I ask you 20 times the question ? True
-</pre>
+{% endhighlight %}{% endcapture %}
+{% include notebook-cell.html execution_count='' content=content type='print' %}
 
 ## Why do they say mutable objects should not be hashable ?
 
@@ -272,20 +289,21 @@ s = {a}
 a.name = "b"
 s.add(Verbose("b"))
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=17 content=content type='input' %}
-<pre>
+{% include notebook-cell.html execution_count='In: [17]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 Asking the hash for a which is -1212919011480583274.
 Asking the hash for b which is 5265123888727380584.
-</pre>
+{% endhighlight %}{% endcapture %}
+{% include notebook-cell.html execution_count='' content=content type='print' %}
 
 {% capture content %}{% highlight python %}
 s
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=18 content=content type='input' %}
-{% capture content %}{% highlight python %}
+{% include notebook-cell.html execution_count='In: [18]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 {b, b}
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=18 content=content type='output' %}
+{% include notebook-cell.html execution_count='Out: [18]' content=content type='output' %}
 
 We've mutated our object `a` to a `b` after we put it in a set, and now the set contains 2 equal `b` objects. We've broken our set ! So that's why `list`s and `dict`s (which are mutables) cannot be put in sets, but `tuple`s and `frozenset`s (which are immutable) can. 
 
@@ -296,20 +314,20 @@ Given that there's a lower and upper limit to the hashes integer values, there a
 {% capture content %}{% highlight python %}
 hash(1.000000000000001) == hash(2561)
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=19 content=content type='input' %}
-{% capture content %}{% highlight python %}
+{% include notebook-cell.html execution_count='In: [19]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 True
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=19 content=content type='output' %}
+{% include notebook-cell.html execution_count='Out: [19]' content=content type='output' %}
 
 {% capture content %}{% highlight python %}
 hash(object) == hash(hash(object))
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=20 content=content type='input' %}
-{% capture content %}{% highlight python %}
+{% include notebook-cell.html execution_count='In: [20]' content=content type='input' %}
+{% capture content %}{% highlight pytb %}
 True
 {% endhighlight %}{% endcapture %}
-{% include notebook-cell.html execution_count=20 content=content type='output' %}
+{% include notebook-cell.html execution_count='Out: [20]' content=content type='output' %}
 
 So, would you use Python if you knew that **sometimes**, you get a random object disappearing from a set or a dict just because it has the same hash as an existing object ? You'd probably run away, and I'd do too. But it's ok, Python has our back. \o/
 
