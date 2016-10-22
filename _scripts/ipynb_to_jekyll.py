@@ -14,15 +14,18 @@ import os
 import re
 import sys
 import io
+import glob
 
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: {} filename.ipynb".format(sys.argv[0]))
-        print("Will create filename.md.")
-        return 1
 
-    filename = sys.argv[1]
+    for filename in sys.argv[1:] or ["_posts/*"]:
+        for one_filename in glob.glob(filename):
+            if one_filename.endswith(".ipynb"):
+                convert(one_filename)
+
+
+def convert(filename):
     notebook = json.load(open(filename))
     dirname = os.path.dirname(filename)
     title = os.path.splitext(os.path.basename(filename))[0]
