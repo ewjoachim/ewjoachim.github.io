@@ -41,6 +41,8 @@ def convert(filename):
     cells = notebook['cells']
 
     for cell in cells:
+        if cell.get("metadata", {}).get("invisible", False):
+            continue
         try:
             if cell['cell_type'] == 'markdown':
                 # Easy
