@@ -30,7 +30,7 @@ Once you've configured what fields you want to be read only, Django will never e
 
 I don't really want to copy the usage instruction because it's already in the Readme, but, trust me, it's dead simple.
 
-## The longer answer _(a.k.a how does this work ? Is this back magic ?)_
+## The longer answer _(a.k.a how does this work ? Is this black magic ?)_
 
 In the Era of the Geek, we're all magicians here, the only difference is that many of us tend to open source our tricks. But the source is not in itself the key to understanding all that takes place here without at least a bit of information.
 
