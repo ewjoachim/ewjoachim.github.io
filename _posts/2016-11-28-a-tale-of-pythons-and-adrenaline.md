@@ -7,7 +7,7 @@ The full story behind the talk I gave tonight at the Paris Python Meetup on Pyth
 
 {{ excerpt_separator }}
 
-So first, if you want the slides, they're in French, I'll translate on demande (please,
+So first, if you want the slides, they're in French, I'll translate on demand (please,
 really, fell free !) or if I make this talk in an international context.
 
 You can have them here : [Ladies and Gentlemen, the Amazing Python 3.6 !](/assets/Python 3.6.slides.html)
