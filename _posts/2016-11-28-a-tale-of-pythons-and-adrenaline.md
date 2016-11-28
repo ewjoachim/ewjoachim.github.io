@@ -28,7 +28,7 @@ fantastic organizers annonced that one of the planned speakers was unavailable. 
 
 Another bit of context : I recently got my hands on (or more precisely got one hand encircled by) a connected watch.
 
-Another bit of context : I'm a [Jupyter](http://jupyter.org/) fanboy. We that part you already know if you've been
+Another bit of context : I'm a [Jupyter](http://jupyter.org/) fanboy. But that part you already know if you've been
 following this blog.
 
 Lastly: When adrenaline flows in my brain, I become convinced I can do anything.
@@ -62,10 +62,11 @@ At that point, the first talk started, about "Creating your [Flask](http://flask
 API in 5 minutes". I remebered that I had once deployed a small flask website using
 [Python Anywhere](https://www.pythonanywhere.com/) which definitely lived up to its name.
 
-I cloned the project I had done an quicky [repurposed it](https://github.com/ewjoachim/bttn_flask/commits/master)
-for its new goal : have 2 API : one that would set a flag ("Go to next slide") and one that would read and
+I cloned my earlier project and quicky [repurposed it](https://github.com/ewjoachim/bttn_flask/commits/master)
+for its new goal : have 2 endpoints : one that would set a flag ("Go to next slide") and one that would read and
 reset it. It took 3 commits to works, including one aptly named ["haaaaaands"](https://xkcd.com/1296/) but then
-it worked. It's obviously bad code, but time was of the essence here.
+it worked. It's obviously bad code, but time was of the essence here. Notice : being coded in 5 minutes was not an
+excuse to use HTTP, so it's using HTTPS, because I have principles (and it was already coded in the first place)
 
 Here's the code, BTW:
 
@@ -126,14 +127,14 @@ setInterval(a, 800);
 ```
 
 Of course it failed because at first I didn't think about those pesky `Access-Control-Allow-Origin` but
-once that was take care of, it worked. With a 10 second delay, but i worked nethertheless.
+once that was taken care of, it worked. With a 10 second delay, but i worked nethertheless.
 
 And then it was my turn to go on stage.
 
 And it worked on stage.
 
 And I delivered my talk, feeling filled with so much energy I could have zapped the light bulbs with
-my confidence.
+my confidence. And maybe I actually did but I'm not even sure I'd have noticed. I was elsewhere.
 
 ## Conclusion
 
@@ -141,6 +142,7 @@ Tinker away. Do things. Make stuff. Useless stuff. The useless stuff of today wi
 you do tomorrow and all in all, you'll end up happier. Be happy. Contribute to Open source software. Be happier.
 Don't listen to the advice of random folks on the Internet telling you how to live your life.
 
+And thank you to all developers worldwide who made this possible.
 
 Yours, truly,
 
