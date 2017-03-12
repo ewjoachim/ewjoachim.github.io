@@ -48,7 +48,7 @@ First I create a class `A` whose ``__hash__`` method returns the result of `id(s
 
 Then I create a class `B` whose ``__hash__`` method returns something quite simpler : the constant 1.
 
-Putting ten thousand instances of `A` in a set takes 4 ms, putting 10 thousand instances of `B` should *logically* take less, because the hash is easier to compute and you don't have to store ten thousand different hashes, right ? Nope. It take longer. 317 times longer.
+Putting ten thousand instances of `A` in a set takes 4 ms, putting 10 thousand instances of `B` should *logically* take less, because the hash is harder to compute and you don't have to store ten thousand different hashes, right ? Nope. It take longer. 317 times longer.
 
 **Note:** The hash of an object is just an integer with the following property : if 2 objects are equal, then their hashes are equal too. (The opposite is not always true, see the remarks at the end of the post)
 
@@ -160,7 +160,7 @@ When I put an object in a set, these things happen :
  1. We compute the hash of the object
  2. We see if the hash is already in our set
  3. If so, we get the objects that share the same hash, they're potential matches
- 4. We wheck if our object is equal to any of that list.
+ 4. We check if our object is equal to any of that list.
  5. If so, it's already in our set, so no need to add it again.
  
 What would happen if 2 objects had the same hash, but were not equal ?
