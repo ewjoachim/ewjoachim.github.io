@@ -331,11 +331,15 @@ True
 
 So, would you use Python if you knew that **sometimes**, you get a random object disappearing from a set or a dict just because it has the same hash as an existing object ? You'd probably run away, and I'd do too. But it's ok, Python has our back. \o/
 
-## [Update : ] Is this a security issue ?
+## [Update :] Is this a security issue ?
 
 Well it can be. I didn't knew about this until [@_rami_](https://twitter.com/_rami_) showed me, but, yes, this can be
 quite a security issue because if it can help an attacker to bring your server on its knees. See [the video](https://media.ccc.de/v/28c3-4680-en-effective_dos_attacks_against_web_application_platforms) and [the discussion](https://twitter.com/_rami_/status/728880347111362560) on the subject.
 
+
+## [Another Update : ] More details on dicts implementations in CPython (and PyPy)
+
+For more details on the exact implementation of dictionnaries (and a few words on sets that don't work the same, as I learned), I strongly recommand [@raymondh](https://twitter.com/raymondh)'s [talk](https://www.youtube.com/watch?v=p33CVV29OG8) on this matter.
 
 ## Conclusion
 
