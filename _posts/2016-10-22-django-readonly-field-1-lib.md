@@ -34,6 +34,6 @@ I don't really want to copy the usage instruction because it's already in the Re
 
 In the Era of the Geek, we're all magicians here, the only difference is that many of us tend to open source our tricks. But the source is not in itself the key to understanding all that takes place here without at least a bit of information.
 
-So, there's [a second article]({% post_url 2016-10-22-django-readonly-field-2-code %}) that explain how it works. I might continue the series and explain more things like the tests, the scaffolding, the CI, the packaging etc, depending of the feedback (if any).
+So, there's [a second article]({% post_url 2016-10-22-django-readonly-field-2-code %}) that explain how it works. I might continue the series and explain more things like [tests and CI]({% post_url 2016-10-31-django-readonly-field-3-ci %}) (*edit* : yay, it's now published), packaging, scaffolding, docs, _etc._, depending on the feedback (if any).
 
 Thank you, and stay tuned !
