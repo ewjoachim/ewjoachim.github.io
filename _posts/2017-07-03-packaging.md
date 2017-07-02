@@ -1,6 +1,6 @@
 ---
 title: Packaging my Python code
-icon: box
+icon: archive
 ---
 
 I gave another talk at my local Python meetup about Python packaging, and its mess.
