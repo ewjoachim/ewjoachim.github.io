@@ -4,47 +4,49 @@ https://keybase.io/ewjoachim
 
 I hereby claim:
 
-  * I am an admin of http://joachim.jablon.fr
+  * I am an admin of https://joachim.jablon.fr
   * I am ewjoachim (https://keybase.io/ewjoachim) on keybase.
   * I have a public key ASDqLSGJHQ-Xs4VeqsMuvxfO7AldSxJszHMCawI2vCyGAAo
 
 To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "eldest_kid": "010109acb1cb711f88e3235521ced5cf6dde462a1153aee966994e66a861abf19c240a",
-            "host": "keybase.io",
-            "kid": "0120ea2d21891d0f97b3855eaac32ebf17ceec095d4b126ccc73026b0236bc2c86000a",
-            "uid": "27b09ebf4c3f26d96602ae91fefdf119",
-            "username": "ewjoachim"
-        },
-        "service": {
-            "hostname": "joachim.jablon.fr",
-            "protocol": "http:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "010109acb1cb711f88e3235521ced5cf6dde462a1153aee966994e66a861abf19c240a",
+      "host": "keybase.io",
+      "kid": "0120ea2d21891d0f97b3855eaac32ebf17ceec095d4b126ccc73026b0236bc2c86000a",
+      "uid": "27b09ebf4c3f26d96602ae91fefdf119",
+      "username": "ewjoachim"
     },
-    "client": {
-        "name": "keybase.io go client",
-        "version": "1.0.16"
-    },
-    "ctime": 1472147454,
-    "expire_in": 504576000,
     "merkle_root": {
-        "ctime": 1472147372,
-        "hash": "c5153067598622f4764c502cedacb704832cf961161a01f732b6f6f97fef8c7489d6d3435f2d05940c0b384d71158156f812c87970ddc74bba31b453cf79b398",
-        "seqno": 601622
+      "ctime": 1528040945,
+      "hash": "d854fc03ceed2ac0a20410eea842d6e0ebcbaa3ef55c66ee89852d4525f88a861aca72fc26a426d11fbcfd6604db59b2d6df6b648142977a286a78ac8551ac2d",
+      "hash_meta": "d1d3393791e21a2712557359356f07998550a950cb02667d5c69480d5873ed2e",
+      "seqno": 2985306
     },
-    "prev": "fd76ab4d3655812630b780bdc3da6dc5198d17bb86f3abaa24637441fb6d5c9e",
-    "seqno": 12,
-    "tag": "signature"
+    "service": {
+      "entropy": "0GAYEmBzSQ+/upxlRd11mH04",
+      "hostname": "joachim.jablon.fr",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.48"
+  },
+  "ctime": 1528040968,
+  "expire_in": 504576000,
+  "prev": "80d0c4b9fb30466662ba039815194a383376525772cefd0c2fe3dc6c4bb8710a",
+  "seqno": 25,
+  "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg6i0hiR0Pl7OFXqrDLr8XzuwJXUsSbMxzAmsCNrwshgAKp3BheWxvYWTFAvp7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxMDlhY2IxY2I3MTFmODhlMzIzNTUyMWNlZDVjZjZkZGU0NjJhMTE1M2FlZTk2Njk5NGU2NmE4NjFhYmYxOWMyNDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZWEyZDIxODkxZDBmOTdiMzg1NWVhYWMzMmViZjE3Y2VlYzA5NWQ0YjEyNmNjYzczMDI2YjAyMzZiYzJjODYwMDBhIiwidWlkIjoiMjdiMDllYmY0YzNmMjZkOTY2MDJhZTkxZmVmZGYxMTkiLCJ1c2VybmFtZSI6ImV3am9hY2hpbSJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiam9hY2hpbS5qYWJsb24uZnIiLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE2In0sImN0aW1lIjoxNDcyMTQ3NDU0LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NzIxNDczNzIsImhhc2giOiJjNTE1MzA2NzU5ODYyMmY0NzY0YzUwMmNlZGFjYjcwNDgzMmNmOTYxMTYxYTAxZjczMmI2ZjZmOTdmZWY4Yzc0ODlkNmQzNDM1ZjJkMDU5NDBjMGIzODRkNzExNTgxNTZmODEyYzg3OTcwZGRjNzRiYmEzMWI0NTNjZjc5YjM5OCIsInNlcW5vIjo2MDE2MjJ9LCJwcmV2IjoiZmQ3NmFiNGQzNjU1ODEyNjMwYjc4MGJkYzNkYTZkYzUxOThkMTdiYjg2ZjNhYmFhMjQ2Mzc0NDFmYjZkNWM5ZSIsInNlcW5vIjoxMiwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEA5aQCDYOwcGlo1pv8rsRleUKhW6/TyM+1JLocqMvmRxmOX8byyc0MjVSmiBE7ZBNFsBILDaYqoqiQkdl/FL6kOqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgsnceDLqheZWi8/kYxefTLOoWkTykv3M9HY5LBORnk3+jdGFnzQICp3ZlcnNpb24B
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg6i0hiR0Pl7OFXqrDLr8XzuwJXUsSbMxzAmsCNrwshgAKp3BheWxvYWTESpcCGcQggNDEufswRmZiugOYFRlKODN2Uldyzv0ML+PcbEu4cQrEIFxA+4muAidm667zCSk3BMWcJBPpXwXHh8FCyNvBXc8QAgHCo3NpZ8RAeNEfjSVa9q9D4nEOAeddN2AqopUKdTQ9hGcz8jE0OtZw2P3y8xI2+089dVFGi+8zXX3Y/TrAbbNHtasqS98aB6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIESCKWr6MgFb3KKY8+wj0VKG63HSvpPkm5S1APgqX7fFo3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
