@@ -54,3 +54,60 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/ewjoachim
 
 ==================================================================
+
+==================================================================
+https://keybase.io/ewjoachim
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ewjoach.im
+  * I am ewjoachim (https://keybase.io/ewjoachim) on keybase.
+  * I have a public key ASDqLSGJHQ-Xs4VeqsMuvxfO7AldSxJszHMCawI2vCyGAAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010109acb1cb711f88e3235521ced5cf6dde462a1153aee966994e66a861abf19c240a",
+      "host": "keybase.io",
+      "kid": "0120ea2d21891d0f97b3855eaac32ebf17ceec095d4b126ccc73026b0236bc2c86000a",
+      "uid": "27b09ebf4c3f26d96602ae91fefdf119",
+      "username": "ewjoachim"
+    },
+    "merkle_root": {
+      "ctime": 1528041128,
+      "hash": "eca8e0508d96bae57819496bb76f4f086db6f9ca45917d0394ac41720db7aaf0c10ebe39d5567cff4e212c721365c5ba5455355eb1dcd7a81f2d84e1ceb718e7",
+      "hash_meta": "6fa80e879a589f311ecc16527f3b4e3c2f7e1f38c5f48f0fd1705ae12c3224bb",
+      "seqno": 2985317
+    },
+    "service": {
+      "entropy": "miYN5Y/ZLNvIOFf8FZZJUI1f",
+      "hostname": "ewjoach.im",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.48"
+  },
+  "ctime": 1528041147,
+  "expire_in": 504576000,
+  "prev": "a22ed405914c7cc113d7ff1c7637e5007c15420af72fd834392c98a681bae73c",
+  "seqno": 26,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg6i0hiR0Pl7OFXqrDLr8XzuwJXUsSbMxzAmsCNrwshgAKp3BheWxvYWTESpcCGsQgoi7UBZFMfMET1/8cdjflAHwVQgr3L9g0OSyYpoG65zzEIOLzvKdxXJlkdNVHbcdDn8836tfq/nRd9IhBKXzh/L2xAgHCo3NpZ8RAwGMTE9UeTJlP1GTPNEjrDHYbXJtX7rnVseODv9YUy7gzlLOLzNvT7VUxo33LEp0j8a419ghmeZCEDHWKK6GNCKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIBh7YUJXCOvj3wUZNloqLsYlmH/iQdA/Kyjkr9FcLFAno3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ewjoachim
+
+==================================================================
