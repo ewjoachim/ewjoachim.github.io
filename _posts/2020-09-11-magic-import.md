@@ -1,6 +1,7 @@
 ---
 title: from hat import rabbit
 icon: magic
+permalink: /magic-import
 ---
 
 Get your finest top hat and dive into the rabbit hole with me for a magic trick like only the best snakes can do: create Python modules out of thin air. We'll import Python modules that don't exist and yet, Presto, here they are.
