@@ -13,5 +13,7 @@ Presented at PyConlineAU 2021, this talk explores both how the Python import mac
 Sources:
 - [How the Python import system works, by Victor Skvortsov](https://tenthousandmeters.com/blog/python-behind-the-scenes-11-how-the-python-import-system-works/)
 - [Python documentation](https://docs.python.org/3/reference/import.html#importsystem)
+- [Procrastinate](https://github.com/peopledoc/procrastinate), the project we speak about
+- [The migration magic](https://github.com/peopledoc/procrastinate/blob/master/procrastinate/contrib/django/migrations_magic.py) which inspired this talk.
 
 Art by [Goulwen Reboux, a.k.a @nautilebleu](https://twitter.com/nautilebleu)
