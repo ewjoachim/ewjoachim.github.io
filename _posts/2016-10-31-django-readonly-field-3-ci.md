@@ -5,7 +5,7 @@ icon: flask
 
 Hello folks !
 
-This is the third article on a [series](% post_url 2016-10-22-django-readonly-field-1-lib %}) I'm trying to make about Django Readonly Field. This one is not about Django Readonly field. Or more precisely it's not specific to Django Readonly Field. I'll talk about all the (quite classical) tools I use to be confident that a package I'm making works. I might also talk about project organization, docs and such.
+This is the third article on a [series]({% post_url 2016-10-22-django-readonly-field-1-lib %}) I'm trying to make about Django Readonly Field. This one is not about Django Readonly field. Or more precisely it's not specific to Django Readonly Field. I'll talk about all the (quite classical) tools I use to be confident that a package I'm making works. I might also talk about project organization, docs and such.
 
 Tests
 =====
