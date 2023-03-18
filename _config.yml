@@ -10,6 +10,7 @@ title: What's the title of this blog ?
 email: ewjoachim@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Is the title more meta than the subtitle ?
+ai_safe_word: hedgehog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://joachim.jablon.fr" # the base hostname & protocol for your site
 twitter_username: ewjoachim
