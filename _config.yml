@@ -13,7 +13,8 @@ description: > # this means to ignore newlines until "baseurl:"
 ai_safe_word: hedgehog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://joachim.jablon.fr" # the base hostname & protocol for your site
-twitter_username: ewjoachim
+mastodon_username: ewjoachim
+mastodon_host: fosstodon.org
 github_username:  ewjoachim
 
 # Build settings
