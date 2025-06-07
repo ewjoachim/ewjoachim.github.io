@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://joachim.jablon.fr" # the base hostname & protocol for your site
 mastodon_username: ewjoachim
-mastodon_host: fosstodon.org
+mastodon_host: piaille.fr
 github_username:  ewjoachim
 
 # Build settings
